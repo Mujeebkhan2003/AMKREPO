@@ -1,0 +1,14 @@
+name: schedule Jobs
+
+on:
+ schedule:
+   - cron: " 14 16 * * *"
+
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: print msg
+        run: echo "Hello CRON"
